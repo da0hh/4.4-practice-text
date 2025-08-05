@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "RU");
+    int a;
+    int b;
+    int summ;
+    cout << "Введите первое число: ";
+    cin >> a;
+    cout << "Введите второе число: ";
+    cin >> b;
+    cout << "Введите их сумму: ";
+    cin >> summ;
+    cout << "-----Проверяем-----\n";
+    if (summ == a + b) {
+        cout << "Верно!\n";
+    }
+    else if (summ != a + b) {
+        int trueSumm = a + b;
+        cout << "Ошибка! Верный результат: " << trueSumm << "\n";
+    }
+}
