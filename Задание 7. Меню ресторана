@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() {
+    setlocale(LC_ALL, "RU"); 
+    int dayWeek
+    std::cout << "Введите день недели (от 1 до 7): ";
+    std::cin >> dayWeek;
+    if (dayWeek == 4) {
+        std::cout << "Меню сегодня (четверг):\n";
+        std::cout << "Гороховый суп\n";
+        std::cout << "Салат «Цезарь» с креветками\n";
+        std::cout << "Куриная ножка с пюре\n";
+        std::cout << "Морс\n";
+    }
+    else if (dayWeek == 2) {
+        std::cout << "Меню сегодня (вторник):\n";
+        std::cout << "Харчо\n";
+        std::cout << "Салат «Оливье»\n";
+        std::cout << "Баварские колбаски с капустой\n";
+        std::cout << "Морс\n";
+    }
+    else {
+        std::cout << "Меню сегодня\n";
+        std::cout << "Гранд Пряный микс\n";
+        std::cout << "Бабл Милк Банан - карамель\n";
+        std::cout << "Сырные колечки начос\n";
+        std::cout << "Соус Биг Спешиал\n";
+    }
+}
+
+
