@@ -2,23 +2,17 @@
 
 int main() {
     setlocale(LC_ALL, "RU");
-    double income, tax = 0;
+    int income;
     std::cout << "-----Калькулятор Налогооблажения----\n"; std::cout << "Введите свой доход: ";
     std::cin >> income;
-
+    int tax;
     if (income >= 50000) {
-        tax = 0.3 * (income - 50000) + 40000*0.2 + 10000*0.13;
-        std::cout << "Сумма налога: " << tax << std::endl;
+        tax += (income - 50000) * 30 /100;
+        income = 50000;
     }
-    else if (income >= 10000) {
-        tax = (income-10000) * 0.2 + 10000 * 0.13;
-        std::cout << "Сумма налога: " << tax << std::endl;
+    if (income > 10000) {
+        tax += (income-10000) * 20 /100;
     }
-    else if (income < 10000 and income > 0) {
-        tax = income * 0.13;
-        std::cout << "Сумма налога: " << tax << std::endl;
-    }
-    else {
-        std::cout << "Некорректные данные...";
-    }
+    tax += income * 13 / 100;
+    std::cout << "Сумма налога: " << tax << std::endl;
 }
