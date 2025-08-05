@@ -1,0 +1,36 @@
+#include <iostream>
+
+
+int main() {
+    setlocale(LC_ALL, "RU"); 
+    int countBarbers;
+    int countMen;
+    std::cout << "Введите кол-во мужчин которые живут в городе ";
+    std::cin >> countMen;
+    std::cout << "Введите кол-во барберов которые у вас работают ";
+    std::cin >> countBarbers;
+
+    int shiftBarber = 8;
+    int monthShift = 30;
+    int countMenMonth = shiftBarber*monthShift;
+
+    int requieredBarbers = countMen / countMenMonth;
+    if (countMen % countMenMonth != requieredBarbers) {
+        requieredBarbers += 1;
+    }
+    std::cout << "Для " << countMen << " мужчин вам необходимо " << requieredBarbers << " барберов.\n";
+
+    if (requieredBarbers == countBarbers) {
+        std::cout << "У вас нужное кол-во барберов\n";
+    }
+    else if (requieredBarbers > countBarbers) {
+        std::cout << "У вас мало барберов\n";
+    }
+    else {
+        std::cout << "У вас много барберов\n";
+    }
+
+    if (requieredBarbers > countBarbers) {
+        std::cout << "Вам не хватает " << requieredBarbers - countBarbers << " барберов";
+    }
+}
