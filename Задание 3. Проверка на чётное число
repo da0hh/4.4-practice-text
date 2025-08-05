@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "RU"); 
+    int x;
+    cout << "Введите число: ";
+    cin >> x;
+    cout << "-----Проверяем-----\n";
+    int remainder = x % 2;
+    if (remainder > 0 and remainder == 0) {
+        cout << "Число " << x << " - четное";
+    }
+    else if (remainder != 0 and remainder > 0 ){
+        cout << "Число " << x << " - нечетное";
+    }
+    else {
+        cout << "Введите положительное число";
+    }
+}
