@@ -1,0 +1,33 @@
+#include <iostream>
+
+
+int main() {
+    setlocale(LC_ALL, "RU"); 
+    int salary1Employer;
+    int salary2Employer;
+    int salary3Employer;
+    
+    std::cout << "Введите зарплату первого сотрудника: ";
+    std::cin >> salary1Employer;
+    std::cout << "Введите зарплату второго сотрудника: ";
+    std::cin >> salary2Employer;
+    std::cout << "Введите зарплату третьего сотрудника: ";
+    std::cin >> salary3Employer;
+    
+    std::cout << "-----Считаем-----";
+    
+    if (salary1Employer > salary2Employer and salary1Employer > salary3Employer) {
+        std::cout << "Самая высокая зарплата в отделе: " << salary1Employer << " рублей\n";
+    }
+    else if (salary2Employer > salary1Employer and salary2Employer > salary3Employer) {
+        std::cout << "Самая высокая зарплата в отделе: " << salary2Employer << " рублей\n";
+    }
+    else {
+        std::cout << "Самая высокая зарплата в отделе: " << salary3Employer << " рублей\n";
+    }
+
+    int med = (salary1Employer + salary2Employer + salary3Employer) / 3;
+    std::cout << "Средняя зарплата в отделе: " << med << " рублей\n";
+}
+
+
