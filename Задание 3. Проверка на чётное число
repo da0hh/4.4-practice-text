@@ -8,14 +8,9 @@ int main() {
     cout << "Введите число: ";
     cin >> x;
     cout << "-----Проверяем-----\n";
-    int remainder = x % 2;
-    if (remainder > 0 and remainder == 0) {
+    if (x % 2 == 0) {
         cout << "Число " << x << " - четное";
-    }
-    else if (remainder != 0 and remainder > 0 ){
-        cout << "Число " << x << " - нечетное";
-    }
-    else {
-        cout << "Введите положительное число";
+    }else{
+      cout << "Число " << x << " - нечетное";
     }
 }
