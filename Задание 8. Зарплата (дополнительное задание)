@@ -1,33 +1,35 @@
 #include <iostream>
 
-
-int main() {
-    setlocale(LC_ALL, "RU"); 
-    int salary1Employer;
-    int salary2Employer;
-    int salary3Employer;
-    
-    std::cout << "Введите зарплату первого сотрудника: ";
-    std::cin >> salary1Employer;
-    std::cout << "Введите зарплату второго сотрудника: ";
-    std::cin >> salary2Employer;
-    std::cout << "Введите зарплату третьего сотрудника: ";
-    std::cin >> salary3Employer;
-    
-    std::cout << "-----Считаем-----";
-    
-    if (salary1Employer > salary2Employer and salary1Employer > salary3Employer) {
-        std::cout << "Самая высокая зарплата в отделе: " << salary1Employer << " рублей\n";
-    }
-    else if (salary2Employer > salary1Employer and salary2Employer > salary3Employer) {
-        std::cout << "Самая высокая зарплата в отделе: " << salary2Employer << " рублей\n";
-    }
-    else {
-        std::cout << "Самая высокая зарплата в отделе: " << salary3Employer << " рублей\n";
-    }
-
-    int med = (salary1Employer + salary2Employer + salary3Employer) / 3;
-    std::cout << "Средняя зарплата в отделе: " << med << " рублей\n";
+int main() { 
+  int salary1; int salary2; int salary3;
+  std::cout << "Введите зарплату первого сотрудника: ";
+  std::cin >> salary1;
+  std::cout << "Введите зарплату второго сотрудника: ";
+  std::cin >> salary2;
+  std::cout << "Введите зарплату третьего сотрудника: ";
+  std::cin >> salary3;
+  std::cout << "-----Считаем-----\n";
+  int top = 0;
+  if (salary1 > salary2 and salary1 > salary3) {
+    top = salary1;
+    std::cout << "Самая высокая зарплата в отделе: " << top << " рублей.\n";
+  } else if(salary2 > salary1 and salary2 > salary3){
+    top = salary2;
+    std::cout << "Самая высокая зарплата в отделе: " << top << " рублей.\n";
+  } else{
+    top = salary3;
+    std::cout << "Самая высокая зарплата в отделе: " << top << " рублей.\n";
+  }
+  if (salary1 < salary2 and salary1 < salary3){
+    int margin = top - salary1;
+    std::cout << "Разница между самой высокой и самой низкой зарплатой в отделе: " << margin << "рублей\n";
+  } else if(salary2 < salary1 and salary2 < salary3){
+    int margin = top - salary2;
+    std::cout << "Разница между самой высокой и самой низкой зарплатой в отделе: " << margin << "рублей\n";
+  } else {
+    int margin = top - salary3;
+    std::cout << "Разница между самой высокой и самой низкой зарплатой в отделе: " << margin << " рублей\n";
+  }
+  int med = (salary1+salary2+salary3)/3;
+  std::cout << "Средняя зарплата в отделе: " << med << " рублей.\n";
 }
-
-
