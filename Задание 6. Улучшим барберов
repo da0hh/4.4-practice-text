@@ -15,7 +15,7 @@ int main() {
     int countMenMonth = shiftBarber*monthShift;
 
     int requieredBarbers = countMen / countMenMonth;
-    if (countMen % countMenMonth != requieredBarbers) {
+    if (countMen % countMenMonth > requieredBarbers) {
         requieredBarbers += 1;
     }
     std::cout << "Для " << countMen << " мужчин вам необходимо " << requieredBarbers << " барберов.\n";
